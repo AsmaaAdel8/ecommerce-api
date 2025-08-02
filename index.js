@@ -1,4 +1,4 @@
-import { createServer, Model } from 'json-server';
+import { createServer } from 'json-server';
 import users from './users.json';
 import products from './products.json';
 
@@ -9,6 +9,6 @@ server.db = {
 };
 
 server.use(jsonServer.router(server.db));
-server.listen(3000, () => {
-  console.log('JSON Server is running on port 3000');
+server.listen(8080||process.env.PORT, () => {
+  console.log('JSON Server is running on port 8080');
 });
